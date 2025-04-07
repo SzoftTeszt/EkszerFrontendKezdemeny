@@ -1,1 +1,18 @@
-<p>products works!</p>
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    <div *ngFor="let e of ekszerek" class="col">
+      <div class="card h-100">
+        <img [src]="e.image" class="card-img-top" [alt]="e.name">
+        <div class="card-body">
+          <h5 class="card-title">{{e.name}}</h5>
+          <p class="card-text">{{e.description}}</p>
+          <p class="card-text">Ár: {{e.daily_price}} Ft/Nap</p>
+          <p class="card-text">Foglaló: {{e.deposit}} Ft</p>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-sm">Lefoglalom</button>
+        </div>
+      </div>
+    </div>
+   
+   
+  </div>
